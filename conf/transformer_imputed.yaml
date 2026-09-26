@@ -1,0 +1,19 @@
+arch: transformer
+
+window:
+  stride_train: 6
+
+train:
+  warmup_steps: 500
+  grad_clip: 1.0
+  lr: 1e-4
+  weight_decay: 1e-4
+
+model:
+  masked_attention: false
+  exog_dim: 2
+  embedding_dim: 192
+  num_heads: 6
+  dim_feedforward: 512
+  num_layers: 4
+  dropout: 0.1

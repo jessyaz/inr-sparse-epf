@@ -1,0 +1,10 @@
+data/raw/
+data/processed/
+runs/
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+*.iml
+.DS_Store

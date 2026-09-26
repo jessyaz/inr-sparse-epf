@@ -1,0 +1,24 @@
+[project]
+name = "inr-sparse-epf"
+version = "1.0.0"
+description = "Forecasting electricity prices from sparse price history with implicit neural representations"
+requires-python = "==3.11.*"
+dependencies = [
+    "epftoolbox",
+    "joblib",
+    "numpy",
+    "omegaconf>=2.3",
+    "pandas>=3.0.5",
+    "scikit-learn>=1.9.1",
+    "tqdm>=4.70.0",
+    "torch==2.2.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "torch==2.7.1; sys_platform != 'darwin' or platform_machine != 'x86_64'",
+    "tensorflow==2.16.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "tensorflow; sys_platform != 'darwin' or platform_machine != 'x86_64'",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+epftoolbox = { git = "https://github.com/jeslago/epftoolbox.git", rev = "47d6e0629f65ebd19d3c12cb5689dbad0c2ea078" }

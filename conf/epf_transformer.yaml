@@ -1,0 +1,26 @@
+arch: epf_transformer
+
+train:
+  warmup_steps: 500
+  weight_decay: 0.0
+
+model:
+  exog_dim: 2
+  dropout: 0.2
+
+markets:
+  NP:
+    train: {lr: 1e-5, grad_clip: 0.0}
+    model: {embedding_dim: 512, num_heads: 8, num_layers: 6, dim_feedforward: 1024}
+  PJM:
+    train: {lr: 1e-4, grad_clip: 0.1}
+    model: {embedding_dim: 128, num_heads: 4, num_layers: 4, dim_feedforward: 1048}
+  BE:
+    train: {lr: 1e-5, grad_clip: 0.1}
+    model: {embedding_dim: 64, num_heads: 4, num_layers: 4, dim_feedforward: 256}
+  FR:
+    train: {lr: 1e-5, grad_clip: 0.25}
+    model: {embedding_dim: 512, num_heads: 8, num_layers: 6, dim_feedforward: 1024}
+  DE:
+    train: {lr: 1e-5, grad_clip: 0.25}
+    model: {embedding_dim: 256, num_heads: 8, num_layers: 6, dim_feedforward: 1024}

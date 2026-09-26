@@ -1,0 +1,11 @@
+arch: dnn
+
+train:
+  lr: 1e-3
+  weight_decay: 1e-4
+
+model:
+  exog_dim: 2
+  hidden_1: 256
+  hidden_2: 128
+  dropout: 0.1

@@ -1,0 +1,11 @@
+arch: lear
+device: cpu
+
+dataset:
+  batch_size: 256
+  num_workers: 0
+
+model:
+  max_iter: 2500
+  recalib_every: 7
+  calibration_windows: [84, 1092, 0]
