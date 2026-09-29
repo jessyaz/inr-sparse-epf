@@ -12,7 +12,7 @@ where `MAE_abl` is the same architecture retrained without price history.
 
 ## Results
 > [!WARNING]
-> **Note**: The ablation average reported in the original text was calculated over four datasets (PJM, BE, FR, DE) rather than DE alone. We also include the aggregate over all five datasets (including NP); results remain fully consistent with our main conclusions.
+> **Note**: The ablation average reported in the original text was calculated over four datasets (PJM, BE, FR, DE) rather than DE alone. We also include the aggregate over all five datasets (including NP); results remain fully consistent with our main conclusions (see Table 3.6 and Table 3.7).
 
 Price history is masked point-wise at random (MCAR) with rate `p`. Every gradient-based model is trained with 5 seeds and evaluated with 5 mask seeds per rate. LEAR is deterministic.
 
@@ -62,7 +62,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 |        | Tr. masq. | 0.08    | 0.20    | 0.40     | 0.76     | 0.92     |
 |        | INR       | -0.01   | -0.01   | -0.01    | 0.13     | 0.40     |
 
-### Table 3. Ablation of exogenous conditioning on PJM (MAE, gap to full)
+### Table 3.1 Ablation of exogenous conditioning on PJM (MAE, gap to full)
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -70,7 +70,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | Static cond. | 4.00 (+4.0%) | 4.13 (+6.1%) | 4.34 (+10.2%) | 4.78 (+18.9%) | 6.80 (+48.6%)  | 9.98 (+67.5%)  |
 | No exog.     | 5.45 (+41.8%)| 6.34 (+63.0%)| 7.34 (+86.6%) | 8.76 (+117.9%)| 12.15 (+165.7%)| 17.60 (+195.3%)|
 
-### Table 3. Ablation of exogenous conditioning on BE (MAE, gap to full)
+### Table 3.2 Ablation of exogenous conditioning on BE (MAE, gap to full)
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -78,7 +78,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | Static cond. | 7.92 (+3.2%) | 7.96 (+3.6%) | 8.04 (+4.2%)  | 8.18 (+5.1%)  | 8.89 (+6.5%)   | 9.76 (+7.3%)   |
 | No exog.     | 8.99 (+17.2%)| 8.94 (+16.4%)| 8.98 (+16.4%) | 9.24 (+18.7%) | 10.60 (+27.0%) | 11.85 (+30.3%) |
 
-### Table 3. Ablation of exogenous conditioning on FR (MAE, gap to full)
+### Table 3.3 Ablation of exogenous conditioning on FR (MAE, gap to full)
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -86,7 +86,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | Static cond. | 5.20 (+2.9%) | 5.26 (+3.0%) | 5.35 (+3.1%)  | 5.52 (+3.2%)  | 6.54 (+2.4%)   | 7.95 (+0.1%)   |
 | No exog.     | 7.00 (+38.5%)| 6.99 (+36.9%)| 7.11 (+37.1%) | 7.64 (+42.9%) | 9.78 (+53.2%)  | 11.17 (+40.6%) |
 
-### Table 3. Ablation of exogenous conditioning on DE (MAE, gap to full)
+### Table 3.4 Ablation of exogenous conditioning on DE (MAE, gap to full)
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -94,7 +94,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | Static cond. | 5.01 (+9.1%) | 5.02 (+10.1%)| 5.05 (+11.3%) | 5.17 (+13.6%) | 5.87 (+20.0%)  | 6.88 (+24.4%)  |
 | No exog.     | 6.83 (+48.8%)| 7.24 (+58.9%)| 7.76 (+70.8%) | 8.68 (+90.8%) | 10.36 (+111.9%)| 11.52 (+108.3%)|
 
-### Table 3. Ablation of exogenous conditioning on NP (MAE, gap to full)
+### Table 3.5 Ablation of exogenous conditioning on NP (MAE, gap to full)
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -103,7 +103,7 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | No exog.     | 3.16 (+36.6%)| 3.19 (+37.4%)| 3.27 (+39.6%) | 3.44 (+42.7%) | 4.24 (+47.4%)  | 5.36 (+52.2%)  |
 
 
-### Table 3. Ablation of exogenous conditioning - Average 4 Datasets [PJM, BE, FR, DE]*
+### Table 3.6 Ablation of exogenous conditioning - Average 4 Datasets [PJM, BE, FR, DE]*
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
@@ -111,13 +111,16 @@ Price history is masked point-wise at random (MCAR) with rate `p`. Every gradien
 | Static cond. | 5.07 (+8.5%) | 5.09 (+9.5%) | 5.13 (+10.6%) | 5.25 (+12.8%) | 5.91 (+18.9%)  | 6.85 (+22.7%)  |
 | No exog.     | 6.83 (+46%)  | 7.21 (+55%)  | 7.70 (+66%)   | 8.57 (+84%)   | 10.23 (+106%)  | 11.25 (+102%)  |
 
-### Table 3. Ablation of exogenous conditioning - Average ALL 5 Datasets [PJM, BE, FR, DE, NP] 
+### Table 3.7 Ablation of exogenous conditioning - Average ALL 5 Datasets [PJM, BE, FR, DE, NP] 
 
 | Variant      | p = 0        | p = 0.3      | p = 0.5       | p = 0.7       | p = 0.9        | p = 0.95       |
 |--------------|--------------|--------------|---------------|---------------|----------------|----------------|
 | Full         | 4.69         | 4.71         | 4.75          | 4.82          | 5.41           | 6.41           |
 | Static cond. | 4.96 (+5.8%) | 5.00 (+6.2%) | 5.08 (+6.9%)  | 5.27 (+9.3%)  | 6.25 (+15.5%)  | 7.65 (+19.3%)  |
 | No exog.     | 6.29 (+34.1%)| 6.54 (+38.9%)| 6.89 (+45.1%) | 7.55 (+56.6%) | 9.43 (+74.3%)  | 11.50 (+79.4%) |
+
+> [!NOTE]
+> **Note**: The ablation average reported in Table 3.6 was calculated over four datasets (PJM, BE, FR, DE) rather than DE alone. In Table 3.7, we include the aggregate over all five datasets (including NP); results remain fully consistent with our main conclusions.
 
 ---
 
